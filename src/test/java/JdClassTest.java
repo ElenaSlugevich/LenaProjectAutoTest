@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
@@ -11,11 +12,11 @@ public class JdClassTest {
     @Test
     public static void main(String[] args) {
         Configuration.holdBrowserOpen = true;
-        open("https://gvm220.lpr.jet.msk.su/");
+        open("https://avm14.lpr.jet.msk.su/");
 
-        element(byName("login")).setValue("jd");
-        element(byName("password")).setValue("q1");
-        $x("//a[.='Войти']").shouldBe(Condition.enabled).click();
+       element(byName("login")).setValue("jd");
+       element(byName("password")).setValue("q1").pressEnter();
+
     }
 }
 
